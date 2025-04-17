@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function number(count, min, max) {
+            const result = new Set();
+            while (result.size < count) {
+            result.add(rand(min, max));
+        }
+        return Array.from(result).sort((a, b) => a - b);
+        }
+            const numberA = number(6, 1, 38);
+            document.write("A區:" + numberA + "<br>");
+
+            const numberB = rand(1, 6);
+            document.write("B區:" + numberB + "<br>");
+    </script>
+</body>
+
+</html>
